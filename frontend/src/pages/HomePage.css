@@ -1,0 +1,30 @@
+.filter-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* This is the grid container */
+.product-grid {
+  display: grid;
+  /* This creates a responsive grid: 
+     It tries to fit as many 350px columns as it can. */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading-text,
+.error-text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+  color: #6c757d;
+}
+
+.error-text {
+  color: var(--danger-color);
+}

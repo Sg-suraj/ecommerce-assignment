@@ -1,0 +1,16 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { StoreProvider } from './context/StoreContext.jsx'; // <-- FIX: Changed to ./
+import App from './App.jsx';                                // <-- FIX: Changed to ./
+import './index.css';                                    // This one was already correct
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <StoreProvider>
+        <App />
+      </StoreProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
