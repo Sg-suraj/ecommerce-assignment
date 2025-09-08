@@ -1,11 +1,9 @@
-# This tells Netlify which folder to build (your frontend app)
 [build]
   base    = "frontend"
   command = "npm run build"
-  publish = "frontend/dist"
+  publish = "dist" # <--- THIS IS THE FIX
 
-# This is the proxy rule for Netlify (it's called a 'redirect')
-# This does the exact same job as the vercel.json file
+# This is your proxy rule (which is correct)
 [[redirects]]
   from   = "/api/*"
   to     = "https://ecommerce-assignment-1o19.onrender.com/api/:splat"
